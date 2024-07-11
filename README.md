@@ -29,16 +29,6 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# test coverage report
-$ npm run test:cov
-```
-
 ## docs
 ```bash
 # swagger live documentation
