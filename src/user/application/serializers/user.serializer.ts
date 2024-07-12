@@ -44,16 +44,24 @@ export class UserSerializer implements UserInterface {
   @Exclude()
   password: string;
 
-  @ApiProperty({ description: 'The followers of the user', type: [UserSerializer] })
+  @ApiProperty({ description: 'The followers of the user', type: [User], example: [] })
   followers?: UserSerializer[];
 
-  @ApiProperty({ description: 'The users who the user is following', type: [UserSerializer] })
+  @ApiProperty({ description: 'The users who the user is following', type: [User], example: [] })
   following?: UserSerializer[];
 
-  @ApiProperty({ description: 'Does the current user follow the user?', type: Boolean })
+  @ApiProperty({
+    description: 'Does the current user follow the user?',
+    type: Boolean,
+    default: false,
+  })
   isFollowing?: boolean;
 
-  @ApiProperty({ description: 'Is the current user a follower of the user?', type: Boolean })
+  @ApiProperty({
+    description: 'Is the current user a follower of the user?',
+    type: Boolean,
+    example: false,
+  })
   isFollower?: boolean;
 
   @ApiProperty({ description: 'The creation date of the user', type: Date })

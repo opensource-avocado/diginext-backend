@@ -5,7 +5,6 @@ import { FollowModule } from './follow/follow.module';
 import { UserModule } from './user/user.module';
 import databaseConfig from './config/database.config';
 import globalConfig from './config/global.config';
-import { CommonModule } from './common/common.module';
 
 @Module({
   imports: [
@@ -23,7 +22,6 @@ import { CommonModule } from './common/common.module';
     }),
     FollowModule,
     UserModule,
-    CommonModule,
   ],
 })
 export class AppModule {}
